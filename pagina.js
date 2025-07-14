@@ -139,13 +139,13 @@ function renderCurriculum() {
     box.appendChild(title);
 
     sem.asignaturas.forEach(asig => {
-      const div = document.createElement("div");
-      div.className = subject ${asig.tipo};
-      if (!selectedTypes.includes(asig.tipo)) {
-        div.classList.add("hidden");
-      }
-      div.textContent = asig.nombre;
-      box.appendChild(div);
+        const div = document.createElement("div");
+        div.className = `subject ${asig.tipo}`;
+        if (!selectedTypes.includes(asig.tipo)) {
+            div.classList.add("hidden");
+        }
+        div.textContent = asig.nombre;
+        box.appendChild(div);
     });
 
     container.appendChild(box);
