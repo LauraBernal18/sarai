@@ -80,11 +80,11 @@ main {
 }
 
 /* Colores por tipo de asignatura */
-.Básica {
+.Basica {
   border-color: #3399ff;
 }
 
-.Humanística {
+.Humanistica {
   border-color: #66cc66;
 }
 
@@ -118,5 +118,12 @@ main {
 
   .subject {
     font-size: 0.9rem;
-  }
+  } 
 }
+
+/* Materias tachadas */
+.tachado {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+

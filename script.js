@@ -1,25 +1,24 @@
-// Datos de todos los semestres
 const curriculum = [
   {
     semestre: "1er Semestre (21 créditos)",
     asignaturas: [
-      { tipo: "Básica", nombre: "Biología" },
-      { tipo: "Básica", nombre: "Biofísica" },
-      { tipo: "Básica", nombre: "Química" },
-      { tipo: "Humanística", nombre: "Historia de la Medicina" },
-      { tipo: "Humanística", nombre: "Socioantropología" },
-      { tipo: "Humanística", nombre: "Expresión Oral y Escrita" },
-      { tipo: "Humanística", nombre: "Cátedra Unilibrista" },
+      { tipo: "Basica", nombre: "Biología" },
+      { tipo: "Basica", nombre: "Biofísica" },
+      { tipo: "Basica", nombre: "Química" },
+      { tipo: "Humanistica", nombre: "Historia de la Medicina" },
+      { tipo: "Humanistica", nombre: "Socioantropología" },
+      { tipo: "Humanistica", nombre: "Expresión Oral y Escrita" },
+      { tipo: "Humanistica", nombre: "Cátedra Unilibrista" },
       { tipo: "Electiva", nombre: "Inglés I" }
     ]
   },
   {
     semestre: "2do Semestre (22 créditos)",
     asignaturas: [
-      { tipo: "Básica", nombre: "Bioquímica" },
-      { tipo: "Básica", nombre: "Morfología I (Anatomía e Histología)" },
-      { tipo: "Básica", nombre: "Bioestadística Descriptiva" },
-      { tipo: "Básica", nombre: "Metodología de la Investigación I" },
+      { tipo: "Basica", nombre: "Bioquímica" },
+      { tipo: "Basica", nombre: "Morfología I (Anatomía e Histología)" },
+      { tipo: "Basica", nombre: "Bioestadística Descriptiva" },
+      { tipo: "Basica", nombre: "Metodología de la Investigación I" },
       { tipo: "Electiva", nombre: "Inglés II" },
       { tipo: "Electiva", nombre: "Electiva Complementaria" }
     ]
@@ -27,10 +26,10 @@ const curriculum = [
   {
     semestre: "3er Semestre (25 créditos)",
     asignaturas: [
-      { tipo: "Básica", nombre: "Biología Molecular" },
-      { tipo: "Básica", nombre: "Morfología II (Neuroanatomía y Embriología)" },
-      { tipo: "Básica", nombre: "Fisiología" },
-      { tipo: "Básica", nombre: "Epidemiología I" },
+      { tipo: "Basica", nombre: "Biología Molecular" },
+      { tipo: "Basica", nombre: "Morfología II (Neuroanatomía y Embriología)" },
+      { tipo: "Basica", nombre: "Fisiología" },
+      { tipo: "Basica", nombre: "Epidemiología I" },
       { tipo: "Electiva", nombre: "Inglés III" },
       { tipo: "Electiva", nombre: "Electiva Complementaria" }
     ]
@@ -38,24 +37,24 @@ const curriculum = [
   {
     semestre: "4to Semestre (24 créditos)",
     asignaturas: [
-      { tipo: "Básica", nombre: "Microbiología" },
-      { tipo: "Humanística", nombre: "Psicología del Desarrollo" },
-      { tipo: "Humanística", nombre: "Constitución Política e Instrucción Cívica" },
-      { tipo: "Básica", nombre: "Epidemiología II" },
-      { tipo: "Básica", nombre: "Bioestadística Analítica" },
+      { tipo: "Basica", nombre: "Microbiología" },
+      { tipo: "Humanistica", nombre: "Psicología del Desarrollo" },
+      { tipo: "Humanistica", nombre: "Constitución Política e Instrucción Cívica" },
+      { tipo: "Basica", nombre: "Epidemiología II" },
+      { tipo: "Basica", nombre: "Bioestadística Analítica" },
       { tipo: "Electiva", nombre: "Inglés IV" },
-      { tipo: "Básica", nombre: "Metodología de la Investigación II" },
+      { tipo: "Basica", nombre: "Metodología de la Investigación II" },
       { tipo: "Electiva", nombre: "Electiva Complementaria" }
     ]
   },
   {
     semestre: "5to Semestre (25 créditos)",
     asignaturas: [
-      { tipo: "Básica", nombre: "Farmacología Básica" },
-      { tipo: "Básica", nombre: "Inmunología" },
-      { tipo: "Básica", nombre: "Patología" },
+      { tipo: "Basica", nombre: "Farmacología Básica" },
+      { tipo: "Basica", nombre: "Inmunología" },
+      { tipo: "Basica", nombre: "Patología" },
       { tipo: "Profesional", nombre: "Salud Comunitaria I" },
-      { tipo: "Humanística", nombre: "Ética Médica" },
+      { tipo: "Humanistica", nombre: "Ética Médica" },
       { tipo: "Electiva", nombre: "Inglés V" },
       { tipo: "Electiva", nombre: "Electiva Complementaria" }
     ]
@@ -63,10 +62,10 @@ const curriculum = [
   {
     semestre: "6to Semestre (24 créditos)",
     asignaturas: [
-      { tipo: "Básica", nombre: "Farmacología y Toxicología Clínica" },
-      { tipo: "Básica", nombre: "Genética Clínica" },
+      { tipo: "Basica", nombre: "Farmacología y Toxicología Clínica" },
+      { tipo: "Basica", nombre: "Genética Clínica" },
       { tipo: "Profesional", nombre: "Salud Comunitaria II" },
-      { tipo: "Humanística", nombre: "Bioética I" },
+      { tipo: "Humanistica", nombre: "Bioética I" },
       { tipo: "Profesional", nombre: "Semiología" },
       { tipo: "Profesional", nombre: "Psicopatología" }
     ]
@@ -77,7 +76,7 @@ const curriculum = [
       { tipo: "Profesional", nombre: "Medicina Interna" },
       { tipo: "Profesional", nombre: "Psiquiatría" },
       { tipo: "Profesional", nombre: "Salud Comunitaria III" },
-      { tipo: "Humanística", nombre: "Bioética II" }
+      { tipo: "Humanistica", nombre: "Bioética II" }
     ]
   },
   {
@@ -119,12 +118,11 @@ const curriculum = [
       { tipo: "Profesional", nombre: "Medicina Interna" },
       { tipo: "Profesional", nombre: "Ginecología y Obstetricia" },
       { tipo: "Profesional", nombre: "Medicina Legal" },
-      { tipo: "Básica", nombre: "Salud Básica" }
+      { tipo: "Basica", nombre: "Salud Básica" }
     ]
   }
 ];
 
-// Función que dibuja los semestres
 function renderCurriculum() {
   const container = document.getElementById("curriculum");
   container.innerHTML = "";
@@ -139,23 +137,28 @@ function renderCurriculum() {
     box.appendChild(title);
 
     sem.asignaturas.forEach(asig => {
-        const div = document.createElement("div");
-        div.className = `subject ${asig.tipo}`;
-        if (!selectedTypes.includes(asig.tipo)) {
-            div.classList.add("hidden");
-        }
-        div.textContent = asig.nombre;
-        box.appendChild(div);
+      const div = document.createElement("div");
+      div.className = `subject ${asig.tipo}`;
+      div.textContent = asig.nombre;
+
+      if (!selectedTypes.includes(asig.tipo)) {
+        div.classList.add("hidden");
+      }
+
+      // 👇 Al hacer clic, se tacha o destacha
+      div.addEventListener("click", () => {
+        div.classList.toggle("tachado");
+      });
+
+      box.appendChild(div);
     });
 
     container.appendChild(box);
   });
 }
 
-// Detecta cambios en los filtros
 document.querySelectorAll(".filter").forEach(chk => {
   chk.addEventListener("change", renderCurriculum);
 });
 
-// Llama por primera vez
 renderCurriculum();
