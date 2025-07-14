@@ -1,0 +1,122 @@
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f8fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Encabezado */
+header {
+  background-color: #0066cc;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Filtros */
+.filters {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background-color: #004f99;
+}
+
+.filters label {
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Contenedor principal */
+main {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Tarjetas de semestre */
+.semester {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.semester:hover {
+  transform: scale(1.01);
+}
+
+.semester h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #004080;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+/* Estilos de asignaturas */
+.subject {
+  padding: 0.6rem 1rem;
+  margin: 0.4rem 0;
+  border-left: 6px solid;
+  background-color: #f7f9fc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Colores por tipo de asignatura */
+.Básica {
+  border-color: #3399ff;
+}
+
+.Humanística {
+  border-color: #66cc66;
+}
+
+.Profesional {
+  border-color: #f0ad4e;
+}
+
+.Electiva {
+  border-color: #ba68c8;
+}
+
+/* Ocultar elementos */
+.hidden {
+  display: none;
+}
+
+/* Responsive menor a 480px */
+@media screen and (max-width: 480px) {
+  .filters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filters label {
+    font-size: 0.9rem;
+  }
+
+  .semester h2 {
+    font-size: 1rem;
+  }
+
+  .subject {
+    font-size: 0.9rem;
+  }
+}

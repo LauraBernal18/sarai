@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malla Curricular Medicina</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>Malla Curricular – Medicina</h1>
+    <div class="filters">
+      <label><input type="checkbox" class="filter" value="Básica" checked> Básica</label>
+      <label><input type="checkbox" class="filter" value="Humanística" checked> Humanística</label>
+      <label><input type="checkbox" class="filter" value="Profesional" checked> Profesional</label>
+      <label><input type="checkbox" class="filter" value="Electiva" checked> Electiva</label>
+    </div>
+  </header>
+  <main id="curriculum"></main>
+  <script>
+const curriculum = [
+  {
+    semestre: "1er Semestre (21 créditos)",
+    asignaturas: [
+      { tipo: "Básica", nombre: "Biología" },
+      { tipo: "Básica", nombre: "Biofísica" },
+      { tipo: "Básica", nombre: "Química" },
+      { tipo: "Humanística", nombre: "Historia de la Medicina" },
+      { tipo: "Humanística", nombre: "Socioantropología" },
+      { tipo: "Humanística", nombre: "Expresión Oral y Escrita" },
+      { tipo: "Humanística", nombre: "Cátedra Unilibrista" },
+      { tipo: "Electiva", nombre: "Inglés I" }
+    ]
+  },
+  {
+    semestre: "2do Semestre (22 créditos)",
+    asignaturas: [
+      { tipo: "Básica", nombre: "Bioquímica" },
+      { tipo: "Básica", nombre: "Morfología I (Anatomía e Histología)" },
+      { tipo: "Básica", nombre: "Bioestadística Descriptiva" },
+      { tipo: "Básica", nombre: "Metodología de la Investigación I" },
+      { tipo: "Electiva", nombre: "Inglés II" },
+      { tipo: "Electiva", nombre: "Electiva Complementaria" }
+    ]
+  },
+  {
+    semestre: "3er Semestre (25 créditos)",
+    asignaturas: [
+      { tipo: "Básica", nombre: "Biología Molecular" },
+      { tipo: "Básica", nombre: "Morfología II (Neuroanatomía y Embriología)" },
+      { tipo: "Básica", nombre: "Fisiología" },
+      { tipo: "Básica", nombre: "Epidemiología I" },
+      { tipo: "Electiva", nombre: "Inglés III" },
+      { tipo: "Electiva", nombre: "Electiva Complementaria" }
+    ]
+  },
+  {
+    semestre: "4to Semestre (24 créditos)",
+    asignaturas: [
+      { tipo: "Básica", nombre: "Microbiología" },
+      { tipo: "Humanística", nombre: "Psicología del Desarrollo" },
+      { tipo: "Humanística", nombre: "Constitución Política e Instrucción Cívica" },
+      { tipo: "Básica", nombre: "Epidemiología II" },
+      { tipo: "Básica", nombre: "Bioestadística Analítica" },
+      { tipo: "Electiva", nombre: "Inglés IV" },
+      { tipo: "Básica", nombre: "Metodología de la Investigación II" },
+      { tipo: "Electiva", nombre: "Electiva Complementaria" }
+    ]
+  },
+  {
+    semestre: "5to Semestre (25 créditos)",
+    asignaturas: [
+      { tipo: "Básica", nombre: "Farmacología Básica" },
+      { tipo: "Básica", nombre: "Inmunología" },
+      { tipo: "Básica", nombre: "Patología" },
+      { tipo: "Profesional", nombre: "Salud Comunitaria I" },
+      { tipo: "Humanística", nombre: "Ética Médica" },
+      { tipo: "Electiva", nombre: "Inglés V" },
+      { tipo: "Electiva", nombre: "Electiva Complementaria" }
+    ]
+  },
+  {
+    semestre: "6to Semestre (24 créditos)",
+    asignaturas: [
+      { tipo: "Básica", nombre: "Farmacología y Toxicología Clínica" },
+      { tipo: "Básica", nombre: "Genética Clínica" },
+      { tipo: "Profesional", nombre: "Salud Comunitaria II" },
+      { tipo: "Humanística", nombre: "Bioética I" },
+      { tipo: "Profesional", nombre: "Semiología" },
+      { tipo: "Profesional", nombre: "Psicopatología" }
+    ]
+  },
+  {
+    semestre: "7mo Semestre (24 créditos)",
+    asignaturas: [
+      { tipo: "Profesional", nombre: "Medicina Interna" },
+      { tipo: "Profesional", nombre: "Psiquiatría" },
+      { tipo: "Profesional", nombre: "Salud Comunitaria III" },
+      { tipo: "Humanística", nombre: "Bioética II" }
+    ]
+  },
+  {
+    semestre: "8vo Semestre (24 créditos)",
+    asignaturas: [
+      { tipo: "Profesional", nombre: "Pediatría" },
+      { tipo: "Profesional", nombre: "Salud Comunitaria IV" },
+      { tipo: "Electiva", nombre: "Electiva Profesional" }
+    ]
+  },
+  {
+    semestre: "9no Semestre (24 créditos)",
+    asignaturas: [
+      { tipo: "Profesional", nombre: "Ginecología y Obstetricia" },
+      { tipo: "Profesional", nombre: "Salud Comunitaria V" },
+      { tipo: "Profesional", nombre: "Medicina Legal" },
+      { tipo: "Electiva", nombre: "Electiva Profesional" }
+    ]
+  },
+  {
+    semestre: "10mo Semestre (19 créditos)",
+    asignaturas: [
+      { tipo: "Profesional", nombre: "Cirugía" },
+      { tipo: "Profesional", nombre: "Salud Comunitaria VI" }
+    ]
+  },
+  {
+    semestre: "11vo Semestre (15 créditos)",
+    asignaturas: [
+      { tipo: "Profesional", nombre: "Cirugía" },
+      { tipo: "Electiva", nombre: "Electiva" },
+      { tipo: "Profesional", nombre: "Pediatría" },
+      { tipo: "Profesional", nombre: "Urgencias Adulto" }
+    ]
+  },
+  {
+    semestre: "12vo Semestre (15 créditos)",
+    asignaturas: [
+      { tipo: "Profesional", nombre: "Medicina Interna" },
+      { tipo: "Profesional", nombre: "Ginecología y Obstetricia" },
+      { tipo: "Profesional", nombre: "Medicina Legal" },
+      { tipo: "Básica", nombre: "Salud Básica" }
+    ]
+  }
+];
+
+function renderCurriculum() {
+  const container = document.getElementById("curriculum");
+  container.innerHTML = "";
+
+  const selectedTypes = [...document.querySelectorAll(".filter:checked")].map(f => f.value);
+
+  curriculum.forEach(sem => {
+    const box = document.createElement("div");
+    box.className = "semester";
+    const title = document.createElement("h2");
+    title.textContent = sem.semestre;
+    box.appendChild(title);
+
+    sem.asignaturas.forEach(asig => {
+      const div = document.createElement("div");
+      div.className = subject ${asig.tipo};
+      if (!selectedTypes.includes(asig.tipo)) {
+        div.classList.add("hidden");
+      }
+      div.textContent = asig.nombre;
+      box.appendChild(div);
+    });
+
+    container.appendChild(box);
+  });
+}
+
+document.querySelectorAll(".filter").forEach(chk => {
+  chk.addEventListener("change", renderCurriculum);
+});
